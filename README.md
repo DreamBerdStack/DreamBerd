@@ -1,3 +1,6 @@
-# DreamBerd
-A DreamBerd parser/preprocessor.
-https://github.com/TodePond/DreamBerd
+<div align="center">
+  <h1>DreamBerd</h1>
+  <i>A DreamBerd parser/preprocessor.</i>
+  <br>
+  <a href="https://github.com/TodePond/DreamBerd">Original Concept</a>
+</div>
