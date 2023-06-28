@@ -1,9 +1,3 @@
-<style>
-  .example1 {
-    background-color: #181818;
-    color: #055099;
-  }
-</style>
 <div align="center">
   <h1>DreamBerd</h1>
   <i>A DreamBerd parser.</i>
