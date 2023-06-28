@@ -29,7 +29,7 @@ to the screen. Here's an example, which you can also read in the <code>examples/
 folder:
 <br><br>
 <code class="example">
-<b># this is a comment. and yes, everything needs to end with an exclamation mark lol#!</b>
+<b># this is a comment. and yes, everything needs to end with an exclamation mark lol # !</b>
 <br>
 p("Hello, DreamBerd!")!
 </code>
@@ -44,5 +44,5 @@ write. Then write another <code>#</code> to declare the end of the comment and t
 example:
 <br>
 <code class="example">
-  <b># this is a comment. and yes, everything needs to end with an exclamation mark lol#!</b>
+  <b># this is a comment. and yes, everything needs to end with an exclamation mark lol # !</b>
 </code>
