@@ -21,8 +21,12 @@ def main():
         print("========================")
         open_file = input("Open a file > ")
         compile_file = open(open_file, 'r').read()
+        transpile = open(f'{open_file}.c', 'a')
+        transpile.write('#include <stdio.h>\n')
+        transpile.write('int main(void) {\n')
         for letter in compile_file:
             compile_lines.append(letter.strip())
+        print("\n")
         for letter in compile_lines:
             if compile_lines[program_counter] == "p":
                 if compile_lines[program_counter - 1] == "!" or program_counter == 0 or in_comment == False:
@@ -31,7 +35,7 @@ def main():
                     while not compile_lines[program_counter] == '"':
                         print_str += compile_lines[program_counter]
                         program_counter += 1
-                    print(print_str)
+                    transpile.write(f'  printf("{print_str}");\n')
                     print_str = ""
                     program_counter += 3
                 else:
@@ -77,6 +81,9 @@ def main():
                 else:
                     print(f'Error at line {program_counter}: {compile_lines[program_counter]} undefined.')
                     break
+        transpile.write('};\n')
+        os.system(f'gcc {open_file}.c -o {open_file}.out')
+        # os.system(f'rm {transpile_to}')
         program_counter = 0
         compile_lines.clear()
 
